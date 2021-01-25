@@ -108,6 +108,7 @@ class GuessNumberViewController: UIViewController {
                 self.chanceLabel.text = "你已經用完所有機會了！"
                 self.typeTextField.text = "\(self.questionNumber)"
                 self.rangeLabel.text = "沒猜中！"
+                //這邊會將goButton所以起來，必須在playAgain()重新開啟他
                 self.goButton.isUserInteractionEnabled = false
             }
             controller.addAction(okAction)
