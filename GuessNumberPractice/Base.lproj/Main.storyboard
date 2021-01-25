@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start Page View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StartPageViewController" customModule="GuessNumberPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="Vm8-9N-sjr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWO-fl-VNg">
+                                <rect key="frame" x="82" y="612" width="250" height="50"/>
+                                <color key="backgroundColor" red="0.1092313305" green="0.26231384279999997" blue="0.28235802049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="RYN-fn-hav"/>
+                                    <constraint firstAttribute="height" constant="50" id="rnB-tU-WhA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="24"/>
+                                <state key="normal" title="Guess Number!">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wPh-4I-IzD" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="nk3-br-Ya5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Vm8-9N-sjr" secondAttribute="trailing" id="7Aj-8J-DAu"/>
+                            <constraint firstItem="Vm8-9N-sjr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="D6D-f7-W0k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xWO-fl-VNg" secondAttribute="bottom" constant="200" id="OdJ-5H-IjG"/>
+                            <constraint firstItem="xWO-fl-VNg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g7m-Tx-5Vz"/>
+                            <constraint firstItem="Vm8-9N-sjr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pga-hW-6Vt"/>
+                            <constraint firstAttribute="bottom" secondItem="Vm8-9N-sjr" secondAttribute="bottom" id="zZZ-Hc-1Zi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgImageView" destination="Vm8-9N-sjr" id="Ip0-iz-CrR"/>
+                        <outlet property="guessNumber" destination="xWO-fl-VNg" id="wOz-EE-1Fd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="77"/>
+        </scene>
+        <!--Guess Number View Controller-->
+        <scene sceneID="LQt-S7-z2f">
+            <objects>
+                <viewController id="wPh-4I-IzD" customClass="GuessNumberViewController" customModule="GuessNumberPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XXG-jP-jLT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="4sK-gw-W9B">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n5u-Y0-WkX">
+                                <rect key="frame" x="82" y="144" width="250" height="250"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="jVI-cB-9PD"/>
+                                    <constraint firstAttribute="width" constant="250" id="nfY-Zc-UHj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="120"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4M-Bq-5cE">
+                                <rect key="frame" x="167" y="404" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.1092313305" green="0.26231384279999997" blue="0.28235802049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="nqt-et-749"/>
+                                    <constraint firstAttribute="height" constant="80" id="pfz-9e-c6I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="36"/>
+                                <state key="normal" title="Go!">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="go:" destination="wPh-4I-IzD" eventType="touchUpInside" id="UMM-ow-bvt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你有6次機會！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fo-GW-qjU">
+                                <rect key="frame" x="86.5" y="94" width="241.5" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="範圍 0 ~ 50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5C-Ta-D1Y">
+                                <rect key="frame" x="113" y="494" width="188" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9J-2P-fHe">
+                                <rect key="frame" x="132" y="547" width="150" height="50"/>
+                                <color key="backgroundColor" red="0.1092313305" green="0.26231384279999997" blue="0.28235802049999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VN0-uu-PGP"/>
+                                    <constraint firstAttribute="width" constant="150" id="WaF-gg-SYz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="24"/>
+                                <state key="normal" title="Play again!">
+                                    <color key="titleColor" systemColor="systemOrangeColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="rePlay:" destination="wPh-4I-IzD" eventType="touchUpInside" id="FbS-f5-oiM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5fm-T1-pyK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="n5u-Y0-WkX" firstAttribute="centerX" secondItem="XXG-jP-jLT" secondAttribute="centerX" id="4sq-ag-Klu"/>
+                            <constraint firstItem="q5C-Ta-D1Y" firstAttribute="centerX" secondItem="XXG-jP-jLT" secondAttribute="centerX" id="4uN-1S-h3m"/>
+                            <constraint firstItem="n5u-Y0-WkX" firstAttribute="top" secondItem="5fm-T1-pyK" secondAttribute="top" constant="100" id="AsN-QY-dvc"/>
+                            <constraint firstItem="L4M-Bq-5cE" firstAttribute="centerX" secondItem="XXG-jP-jLT" secondAttribute="centerX" id="Nnd-mL-IpC"/>
+                            <constraint firstItem="L4M-Bq-5cE" firstAttribute="top" secondItem="n5u-Y0-WkX" secondAttribute="bottom" constant="10" id="Nry-wx-N5g"/>
+                            <constraint firstItem="I9J-2P-fHe" firstAttribute="top" secondItem="q5C-Ta-D1Y" secondAttribute="bottom" constant="10" id="XSa-0W-hpD"/>
+                            <constraint firstAttribute="trailing" secondItem="4sK-gw-W9B" secondAttribute="trailing" id="bs8-EN-eeO"/>
+                            <constraint firstItem="4sK-gw-W9B" firstAttribute="leading" secondItem="XXG-jP-jLT" secondAttribute="leading" id="e3h-jS-IDF"/>
+                            <constraint firstAttribute="bottom" secondItem="4sK-gw-W9B" secondAttribute="bottom" id="frZ-aP-XnZ"/>
+                            <constraint firstItem="4sK-gw-W9B" firstAttribute="top" secondItem="XXG-jP-jLT" secondAttribute="top" id="nJn-QT-fWg"/>
+                            <constraint firstItem="I9J-2P-fHe" firstAttribute="centerX" secondItem="XXG-jP-jLT" secondAttribute="centerX" id="nlR-ZT-cYa"/>
+                            <constraint firstItem="1fo-GW-qjU" firstAttribute="centerX" secondItem="XXG-jP-jLT" secondAttribute="centerX" id="pRA-X0-Rx6"/>
+                            <constraint firstItem="q5C-Ta-D1Y" firstAttribute="top" secondItem="L4M-Bq-5cE" secondAttribute="bottom" constant="10" id="rjT-eg-tzI"/>
+                            <constraint firstItem="1fo-GW-qjU" firstAttribute="top" secondItem="5fm-T1-pyK" secondAttribute="top" constant="50" id="xsa-IW-VkX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Lf-Ug-oBP"/>
+                    <connections>
+                        <outlet property="againButton" destination="I9J-2P-fHe" id="PU1-RI-GNu"/>
+                        <outlet property="bgImageView" destination="4sK-gw-W9B" id="eQL-h2-Yzm"/>
+                        <outlet property="chanceLabel" destination="1fo-GW-qjU" id="3FG-Yb-hQZ"/>
+                        <outlet property="goButton" destination="L4M-Bq-5cE" id="gU7-Cp-RD4"/>
+                        <outlet property="rangeLabel" destination="q5C-Ta-D1Y" id="xCl-8u-I2U"/>
+                        <outlet property="typeTextField" destination="n5u-Y0-WkX" id="GYn-r1-yfR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QII-vk-4Vh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="738" y="76"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="1920" height="1080"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemFillColor">
+            <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
